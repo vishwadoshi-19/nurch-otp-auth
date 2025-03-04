@@ -45,7 +45,6 @@ nurch-provider-app/
 │   │   │   │   ├── signup.ts
 │   │   │   │   └── logout.ts
 │   │   │   ├── providers/
-│   │   │   │   ├── index.ts
 │   │   │   │   ├── [id].ts
 │   │   │   ├── staff/
 │   │   │   │   ├── index.ts
@@ -124,8 +123,7 @@ nurch-provider-app/
 
 ### Provider Routes
 
-- **GET `/api/providers`**: Fetch all providers.
-- **POST `/api/providers`**: Create a new provider.
+- **GET `/api/providers/:id`**: Fetch provider details.
 - **PUT `/api/providers/:id`**: Update provider details.
 - **DELETE `/api/providers/:id`**: Delete a provider.
 
@@ -142,6 +140,8 @@ nurch-provider-app/
 - **POST `/api/jobs`**: Create a new job.
 - **PUT `/api/jobs/:id`**: Update job details.
 - **DELETE `/api/jobs/:id`**: Delete a job.
+- **POST `/api/jobs/:id/assign`**: Assign a job to a staff member.
+- **PUT `/api/jobs/:id/status`**: Update job status (accepted/declined).
 
 ### Attendance Routes
 
@@ -154,3 +154,73 @@ nurch-provider-app/
 
 - **Testing**: Write unit and integration tests using Jest and React Testing Library.
 - **Deployment**: Deploy the app using Vercel or Firebase Hosting.
+
+## 7. Theme and Design
+
+To maintain consistency with the staff dashboard, we will use the same color palette, fonts, and overall design aesthetics.
+
+### Color Palette
+
+- **Primary Color**: #1E3A8A (Indigo)
+- **Secondary Color**: #3B82F6 (Blue)
+- **Accent Color**: #10B981 (Green)
+- **Background Color**: #F3F4F6 (Gray)
+- **Text Color**: #111827 (Dark Gray)
+
+### Fonts
+
+- **Primary Font**: Inter, sans-serif
+- **Secondary Font**: Roboto, sans-serif
+
+### Design Aesthetics
+
+- **Consistent Spacing**: Use consistent spacing and padding throughout the app.
+- **Responsive Design**: Ensure the app is fully responsive and works well on all devices.
+- **Clean and Minimalistic**: Maintain a clean and minimalistic design to enhance user experience.
+
+### Provider Onboarding Form Fields (Updated)
+
+1. **Business Information**
+
+   - Business Name
+   - Business Owner's Name
+   - Years in Business
+   - Business Address
+   - Contact Number(s)
+   - Emergency Contact Numbers (24x7)
+   - Business Email ID
+   - Business PAN Number
+   - Business GST Number
+   - Business Hours (for Customer Query)
+   - Cities Where Service is Provided
+
+2. **Staff Information**
+
+   - Number of Attendants Available
+   - Number of Nurses Available
+   - Number of Semi-Nurses Available
+   - Customers Served in Last 3 Months
+
+3. **Charges Information**
+
+   - Attendant Charges (for 24 Hour Shift, for 30+ days)
+   - Attendant Charges (for 12 Hour Shift, for 30+ days)
+   - Attendant Charges (for 6 Hour Shift, for 30+ days)
+   - Semi-Nurse Charges (for 24 Hour Shift, for 30+ days)
+   - Semi-Nurse Charges (for 12 Hour Shift, for 30+ days)
+   - Semi-Nurse Charges (for 6 Hour Shift, for 30+ days)
+   - Nurse Charges (for 24 Hour Shift, for 30+ days)
+   - Nurse Charges (for 12 Hour Shift, for 30+ days)
+   - Nurse Charges (for 6 Hour Shift, for 30+ days)
+
+4. **Availability Information**
+
+   - Duration for which Attendant is Available
+   - Duration for which Semi-Nurse is Available
+   - Duration for which Nurse is Available
+
+5. **Additional Information**
+   - Services Offered by Attendants (other than Patient Care)
+   - Time to Provide Replacement
+   - Time Required to provide nurses/attendants
+   - Extra information you would like to add

@@ -14,7 +14,7 @@ export const FormProgress: React.FC<FormProgressProps> = ({
 
   return (
     <div className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
-      <div className="max-w-md mx-auto px-4 py-2">
+      <div className="max-w-md mx-auto px-4 py-2 hidden">
         <div className="flex items-center justify-between">
           {steps.map((step, index) => (
             <div key={step.id} className="flex items-center">

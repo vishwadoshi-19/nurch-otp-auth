@@ -220,6 +220,7 @@ export default function SignIn() {
 
       // Save form data to Firestore
       const result = await saveFormData(user.uid, updatedFormState);
+      // router.push("/dashboard");
 
       if (result.success) {
         setStep("completed");

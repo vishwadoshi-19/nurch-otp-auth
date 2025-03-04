@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuth } from '@/context/AuthContext';
-import LoadingScreen from '@/components/common/LoadingScreen';
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext";
+import LoadingScreen from "@/components/common/LoadingScreen";
 
 export default function Home() {
   const { isAuthenticated, isLoading, isNewUser } = useAuth();
@@ -13,12 +13,12 @@ export default function Home() {
     if (!isLoading) {
       if (isAuthenticated) {
         if (isNewUser) {
-          router.push('/sign-in');
+          router.push("/");
         } else {
-          router.push('/dashboard');
+          router.push("/dashboard");
         }
       } else {
-        router.push('/sign-in');
+        router.push("/sign-in");
       }
     }
   }, [isAuthenticated, isLoading, isNewUser, router]);
